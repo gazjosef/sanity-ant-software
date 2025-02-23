@@ -9,6 +9,7 @@ import { Toaster } from "sonner";
 
 import DraftModeToast from "@/app/components/DraftModeToast";
 import Footer from "@/app/components/Footer";
+import Footer2 from "@/app/components/Layout/Footer";
 import Header from "@/app/components/Header";
 import Header2 from "@/app/components/Layout/Header";
 import * as demo from "@/sanity/lib/demo";
@@ -83,7 +84,7 @@ export default async function RootLayout({
           <SanityLive onError={handleError} />
           <Header2 />
           <main className="">{children}</main>
-          <Footer />
+          <Footer2 />
         </section>
         <SpeedInsights />
       </body>
