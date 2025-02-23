@@ -1,1 +1,1 @@
-# sanity-nuxt-ant-software
+# sanity-ant-software
