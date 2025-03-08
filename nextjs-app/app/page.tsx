@@ -27,13 +27,13 @@ export default async function Page() {
               </h1>
             </div>
             <div className="mt-6 space-y-6 prose sm:prose-lg md:prose-xl lg:prose-2xl text-gray-700">
-              <p>
+              <div>
                 This starter is a statically generated site that uses Next.js
                 for the frontend and Sanity to handle its content. It comes with
                 a standalone Sanity Studio that offers features like real-time
                 collaboration, instant side-by-side content previews, and
                 intuitive editing.
-              </p>
+              </div>
             </div>
             <div className="flex items-center flex-col gap-4">
               <GetStartedCode />
