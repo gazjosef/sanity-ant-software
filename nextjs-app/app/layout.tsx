@@ -22,6 +22,17 @@ import { handleError } from "./client-utils";
  * Generate metadata for the page.
  * Learn more: https://nextjs.org/docs/app/api-reference/functions/generate-metadata#generatemetadata-function
  */
+// import { createGlobalStyle } from "styled-components";
+
+// const GlobalStyle = createGlobalStyle`
+//   /* Global styles go here */
+//   body {
+//     font-family: Arial, sans-serif;
+//     margin: 0;
+//     padding: 0;
+//   }
+// `;
+
 export async function generateMetadata(): Promise<Metadata> {
   const { data: settings } = await sanityFetch({
     query: settingsQuery,

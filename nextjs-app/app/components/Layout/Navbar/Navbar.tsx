@@ -1,9 +1,12 @@
+// Navbar.tsx
 "use client";
 import { useState } from "react";
-import { Link, NavbarLinks } from "./Navbar.links";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { NavbarList, NavbarListLink, NavbarToggle } from "./Navbar.styles";
-import { Flex } from "@/app/styles/Layout.styles";
+import { NavbarList, NavbarListLink } from "./Navbar.styles";
+import { NavbarLinks, Link } from "./Navbar.links"; // Import the static data
+
+// type NavbarProps = {
+//   navbarLinks: Link[];
+// };
 
 const Navbar = () => {
   const [toggle, setToggle] = useState<boolean>(false);
@@ -11,17 +14,14 @@ const Navbar = () => {
   const handleClick = () => setToggle((t) => !t);
 
   return (
-    <Flex alignItems="center" justifyContent="space-between">
+    <div>
       <NavbarList>
-        {/* {NavbarLinks.map((item: Link) => (
-          <NavbarListLink key={item.title} title={item.title} url={item.url} />
-        ))} */}
+        {NavbarLinks.map((item) => (
+          <NavbarListLink key={item.url} title={item.title} url={item.url} />
+        ))}
       </NavbarList>
-
-      <NavbarToggle onClick={handleClick}>
-        {toggle ? <FaTimes /> : <FaBars />}
-      </NavbarToggle>
-    </Flex>
+    </div>
   );
 };
+
 export default Navbar;

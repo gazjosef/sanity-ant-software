@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 export const NavbarContainer = styled.nav`
@@ -46,7 +47,7 @@ export const NavbarListLink = ({
   url: string;
 }) => (
   <NavbarListItem>
-    <a href={url}>{title}</a>
+    <Link href={url}>{title}</Link>
   </NavbarListItem>
 );
 

@@ -16,6 +16,10 @@ export default function Header() {
           <Navbar />
         </Flex>
       </Container> */}
+      <Link href="#home">
+        <h1>ANT SOFTWARE</h1>
+      </Link>
+      <Navbar />
     </HeaderContainer>
   );
 }
