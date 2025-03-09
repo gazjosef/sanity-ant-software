@@ -2,6 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 🌎 Define CSS Variables for Theming */
+:root {
+  /* 🌈 Colours */
+  --primary: #3498db; /* Primary brand colour */
+  --secondary: #2ecc71; /* Secondary brand colour */
+  --accent: #f39c12; /* Accent / Call-to-action */
+  --danger: #e74c3c; /* Error / Danger */
+  --success: #2ecc71; /* Success */
+  --warning: #f1c40f; /* Warning */
+  --info: #3498db; /* Info */
+
+  /* 🌓 Dark Mode */
+  --background-light: #ffffff;
+  --background-dark: #1e1e1e;
+  --text-light: #333;
+  --text-dark: #f5f5f5;
+  --border-light: #ddd;
+  --border-dark: #444;
+
+  /* 📏 Layout */
+  --max-width: 1200px;
+  --padding: 2rem;
+  --margin: 1rem;
+  --gap: 1rem;
+
+  /* 📱 Breakpoints */
+  --mobile: 480px;
+  --tablet: 768px;
+  --desktop: 1024px;
+
+  /* 🔤 Typography */
+  --font-primary: "Inter", sans-serif;
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* 🎨 Shadows & Borders */
+  --shadow-sm: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  --border-radius: 8px;
+
+  /* 🎬 Animations */
+  --transition: 0.3s ease-in-out;
+}
+
+/* 🌙 Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-light: var(--background-dark);
+    --text-light: var(--text-dark);
+    --border-light: var(--border-dark);
+  }
+}
+
 /* Box sizing rules & remove default margin/padding */
 *,
 *::after,

@@ -1,18 +1,22 @@
 "use client";
 import styled from "styled-components";
 
-export const Container = styled.div.withConfig({
-  shouldForwardProp: (prop) => !["fluid"].includes(prop),
+export const Wrapper = styled.div.withConfig({
+  shouldForwardProp: (prop) => !["padding"].includes(prop),
 })<{
-  fluid?: boolean;
-  maxWidth?: string;
   padding?: string;
 }>`
+  min-width: 1200px;
   width: 100%;
-  max-width: ${({ fluid, maxWidth }) =>
-    fluid ? "100%" : maxWidth || "1200px"};
-  margin: 0 auto;
-  padding: ${({ padding }) => padding || "0 1rem"};
+  max-width: 100%;
+  margin-inline: auto;
+  padding: ${({ padding }) =>
+    padding || "0 4rem"}; /* Default padding to 4rem, can be overridden */
+
+  /* For smaller screens (below 1200px), calculate width minus padding */
+  @media (max-width: 1200px) {
+    width: calc(100% - ${({ padding }) => padding || "4rem"});
+  }
 `;
 
 export const CenteredGrid = styled.div.withConfig({
@@ -31,11 +35,18 @@ export const CenteredGrid = styled.div.withConfig({
 
 export const Flex = styled.div.withConfig({
   shouldForwardProp: (prop) =>
-    !["fullWidth", "alignItems", "justifyContent"].includes(prop),
+    ![
+      "justifyContent",
+      "alignItems",
+      "flexDirection",
+      "gap",
+      "fullWidth",
+      "height",
+    ].includes(prop),
 })<{
   justifyContent?: string;
   alignItems?: string;
-  flexDirection?: string;
+  flexDirection?: "row" | "column"; // Allow 'row' or 'column'
   gap?: string;
   fullWidth?: boolean;
   height?: string;
@@ -43,26 +54,8 @@ export const Flex = styled.div.withConfig({
   display: flex;
   justify-content: ${({ justifyContent }) => justifyContent || "flex-start"};
   align-items: ${({ alignItems }) => alignItems || "stretch"};
-  flex-direction: ${({ flexDirection }) => flexDirection || "row"};
-  gap: ${({ gap }) => gap || "0"};
-  width: ${({ fullWidth }) => (fullWidth ? "100%" : "auto")};
-  height: ${({ height }) => height || "auto"};
-`;
-
-export const FlexColumn = styled.div.withConfig({
-  shouldForwardProp: (prop) =>
-    !["justifyContent", "alignItems", "fullWidth"].includes(prop), // Filter `fullWidth` prop
-})<{
-  justifyContent?: string;
-  alignItems?: string;
-  gap?: string;
-  fullWidth?: boolean;
-  height?: string;
-}>`
-  display: flex;
-  flex-direction: column;
-  justify-content: ${({ justifyContent }) => justifyContent || "flex-start"};
-  align-items: ${({ alignItems }) => alignItems || "stretch"};
+  flex-direction: ${({ flexDirection }) =>
+    flexDirection || "row"}; // Default to row
   gap: ${({ gap }) => gap || "0"};
   width: ${({ fullWidth }) => (fullWidth ? "100%" : "auto")};
   height: ${({ height }) => height || "auto"};

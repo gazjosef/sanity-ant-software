@@ -3,23 +3,18 @@ import Link from "next/link";
 import Navbar from "../Navbar/Navbar";
 // Styles
 import { HeaderContainer } from "./Header.styles";
-import { Container, Flex, FlexColumn } from "@/app/styles/Layout.styles";
+import { Flex, Wrapper } from "@/app/styles/Layout.styles";
+import Logo from "../../Snippets/Logo/Logo";
 
 export default function Header() {
   return (
     <HeaderContainer>
-      {/* <Container fluid>
+      <Wrapper>
         <Flex alignItems="center" justifyContent="space-between" fullWidth>
-          <Link href="#home">
-            <h1>ANT SOFTWARE</h1>
-          </Link>
+          <Logo />
           <Navbar />
         </Flex>
-      </Container> */}
-      <Link href="#home">
-        <h1>ANT SOFTWARE</h1>
-      </Link>
-      <Navbar />
+      </Wrapper>
     </HeaderContainer>
   );
 }
