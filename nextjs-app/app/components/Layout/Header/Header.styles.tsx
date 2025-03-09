@@ -2,10 +2,10 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-  background-color: white;
-  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
+  background-color: var(--white-0);
   min-height: 10rem;
   width: 100%;
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
 
   position: fixed;
   top: 0;

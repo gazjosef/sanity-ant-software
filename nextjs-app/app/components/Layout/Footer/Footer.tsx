@@ -3,6 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
 import FooterCopyright from "./FooterCopyright";
+import { Flex } from "@/app/styles/Layout.styles";
+import Logo from "../../Snippets/Logo/Logo";
+import WhiteLogo from "@/app/assets/img/white-logo.png";
+import { NavbarLinks } from "../Navbar/Navbar.links";
 
 const FooterNavItems = [
   { title: "Home", url: "#home" },
@@ -11,7 +15,7 @@ const FooterNavItems = [
   { title: "Contact", url: "#contact" },
 ];
 
-const FooterContainer = styled.footer`
+const FooterSection = styled.footer`
   background: #222;
   color: white;
   padding: 2rem 0;
@@ -19,33 +23,25 @@ const FooterContainer = styled.footer`
 `;
 
 const FooterWrapper = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: var(--max-width);
+  margin-inline: auto;
 `;
 
-const LogoContainer = styled.div`
-  margin-bottom: 1rem;
-`;
-
-const Nav = styled.nav`
+const FooterNavbar = styled.nav`
   margin: 1rem 0;
 `;
 
-const FooterList = styled.ul`
+const FooterNavbarList = styled.ul`
   display: flex;
   gap: 1.5rem;
   list-style: none;
   padding: 0;
 `;
 
-const FooterLink = styled(Link)`
+const FooterNavbarLink = styled(Link)`
   color: white;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: var(--font-size-large);
   transition: color 0.3s ease;
 
   &:hover {
@@ -55,30 +51,28 @@ const FooterLink = styled(Link)`
 
 export default function Footer() {
   return (
-    <FooterContainer>
-      {/* <FooterWrapper>
-        <LogoContainer>
-          <Image
-            src="/img/white-logo.png"
-            // src="/nextjs-app/app/assets/img/white-logo.png"
-            // src="src/assets/img/white-logo.png"
-            alt="Ant Software"
-            height={100}
-            width={352}
-          />
-        </LogoContainer>
+    <FooterSection>
+      <FooterWrapper>
+        <Flex
+          alignItems="items-center"
+          justifyContent="space-between"
+          fullWidth
+        >
+          <Logo src={WhiteLogo} />
 
-        <Nav>
-          <FooterList>
-            {FooterNavItems.map(({ title, url }) => (
-              <li key={title}>
-                <FooterLink href={url}>{title}</FooterLink>
-              </li>
-            ))}
-          </FooterList>
-        </Nav>
-      </FooterWrapper> */}
+          <FooterNavbar>
+            <FooterNavbarList>
+              {NavbarLinks.map(({ title, url }) => (
+                <li key={title}>
+                  <FooterNavbarLink href={url}>{title}</FooterNavbarLink>
+                </li>
+              ))}
+            </FooterNavbarList>
+          </FooterNavbar>
+        </Flex>
+      </FooterWrapper>
+
       <FooterCopyright />
-    </FooterContainer>
+    </FooterSection>
   );
 }

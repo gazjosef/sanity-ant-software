@@ -9,9 +9,9 @@ import {
 export default function FooterCopyright() {
   return (
     <FooterSection>
-      {/* <CopyrightText>
+      <CopyrightText>
         Copyright <Highlight>&copy;</Highlight> Ant Software
-      </CopyrightText> */}
+      </CopyrightText>
     </FooterSection>
   );
 }

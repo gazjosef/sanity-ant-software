@@ -13,6 +13,24 @@
   --warning: #f1c40f; /* Warning */
   --info: #3498db; /* Info */
 
+  /* 🎨 White Shades */
+  --white-0: hsl(0, 0%, 100%);
+  --white-50: hsl(0, 0%, 97%);
+  --white-100: hsl(0, 0%, 95%);
+  --white-200: hsl(0, 0%, 87%);
+  --white-300: hsl(0, 0%, 80%);
+
+  /* 🎨 Neutral Shades */
+  --neutral-400: hsl(0, 0%, 60%);
+  --neutral-500: hsl(0, 0%, 50%);
+  --neutral-600: hsl(0, 0%, 40%);
+  --neutral-700: hsl(0, 0%, 30%);
+
+  /* 🎨 Black Shades */
+  --black-800: hsl(0, 0%, 20%);
+  --black-900: hsl(0, 0%, 10%);
+  --black-1000: hsl(0, 0%, 0%);
+
   /* 🌓 Dark Mode */
   --background-light: #ffffff;
   --background-dark: #1e1e1e;
@@ -36,8 +54,8 @@
   --font-primary: "Inter", sans-serif;
   --font-size-small: 0.875rem;
   --font-size-base: 1rem;
-  --font-size-large: 1.25rem;
-  --font-size-xl: 1.5rem;
+  --font-size-large: 2rem;
+  --font-size-xl: 2.5rem;
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-bold: 700;

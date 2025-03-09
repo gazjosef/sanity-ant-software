@@ -2,9 +2,7 @@ import Link from "next/link";
 import styled from "styled-components";
 
 export const NavbarContainer = styled.nav`
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
+  font-size: var(--font-size-large);
 `;
 
 // export const NavbarList = styled.ul<{ toggle: boolean }>`

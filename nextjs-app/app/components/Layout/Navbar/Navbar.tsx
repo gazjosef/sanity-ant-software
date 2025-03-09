@@ -1,7 +1,7 @@
 // Navbar.tsx
 "use client";
 import { useState } from "react";
-import { NavbarList, NavbarListLink } from "./Navbar.styles";
+import { NavbarContainer, NavbarList, NavbarListLink } from "./Navbar.styles";
 import { NavbarLinks, Link } from "./Navbar.links"; // Import the static data
 
 // type NavbarProps = {
@@ -14,13 +14,13 @@ const Navbar = () => {
   const handleClick = () => setToggle((t) => !t);
 
   return (
-    <div>
+    <NavbarContainer>
       <NavbarList>
         {NavbarLinks.map((item) => (
           <NavbarListLink key={item.url} title={item.title} url={item.url} />
         ))}
       </NavbarList>
-    </div>
+    </NavbarContainer>
   );
 };
 

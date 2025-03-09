@@ -6,7 +6,7 @@ export const Wrapper = styled.div.withConfig({
 })<{
   padding?: string;
 }>`
-  min-width: 1200px;
+  min-width: var(--max-width);
   width: 100%;
   max-width: 100%;
   margin-inline: auto;
