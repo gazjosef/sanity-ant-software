@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import FooterCopyright from "./FooterCopyright";
 import Logo from "../../Snippets/Logo/Logo";
 import WhiteLogo from "@/app/assets/img/white-logo.png";
