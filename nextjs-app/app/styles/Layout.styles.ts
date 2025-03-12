@@ -2,35 +2,83 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div.withConfig({
-  shouldForwardProp: (prop) => !["padding"].includes(prop),
+  shouldForwardProp: (prop) => !["padding", "maxWidth"].includes(prop),
 })<{
   padding?: string;
+  maxWidth?: string;
 }>`
-  min-width: var(--max-width);
-  width: 100%;
-  max-width: 100%;
-  margin-inline: auto;
-  padding: ${({ padding }) =>
-    padding || "0 4rem"}; /* Default padding to 4rem, can be overridden */
+  --padding: ${({ padding }) => padding || "4rem"};
+  --max-width: ${({ maxWidth }) => maxWidth || "var(--max-width)"};
 
-  /* For smaller screens (below 1200px), calculate width minus padding */
+  width: min(90%, 120rem);
+  margin-inline: auto;
+  padding: var(--padding);
+
   @media (max-width: 1200px) {
-    width: calc(100% - ${({ padding }) => padding || "4rem"});
+    width: calc(100% - var(--padding));
   }
 `;
 
-export const CenteredGrid = styled.div.withConfig({
-  shouldForwardProp: (prop) => !["fullScreen"].includes(prop), // Filter `fullWidth` prop
+interface SectionProps {
+  variant?: "default" | "hero" | "contact"; // Add more if needed
+}
+
+export const Section = styled.section<SectionProps>`
+  --padding-top-bottom: 10rem;
+  --padding-left-right: 2rem;
+
+  min-height: 100vh;
+  min-height: 100svh;
+  // padding: var(--padding-top-bottom) var(--padding-left-right);
+
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+
+  ${({ variant }) =>
+    variant === "hero" &&
+    `
+    background-color: var(--clr-primary-200);
+  `}
+
+  ${({ variant }) =>
+    variant === "contact" &&
+    `
+    min-height: calc(100svh - 15rem);
+  `}
+`;
+
+export const Grid = styled.div.withConfig({
+  shouldForwardProp: (prop) =>
+    !["fullScreen", "height", "width", "columns", "gap", "placeItems"].includes(
+      prop
+    ),
 })<{
   fullScreen?: boolean;
   height?: string;
   width?: string;
+  columns?: string;
+  gap?: string;
+  placeItems?: string;
 }>`
   display: grid;
-  place-items: center;
+  place-items: ${({ placeItems }) => placeItems || "center"};
   height: ${({ fullScreen, height }) =>
     fullScreen ? "100vh" : height || "auto"};
   width: ${({ fullScreen, width }) => (fullScreen ? "100vw" : width || "auto")};
+  grid-template-columns: ${({ columns }) =>
+    columns || "repeat(auto-fit, minmax(150px, 1fr))"};
+  gap: ${({ gap }) => gap || "1rem"};
+
+  @media (max-width: 1024px) {
+    grid-template-columns: ${({ columns }) => columns || "repeat(2, 1fr)"};
+    gap: ${({ gap }) => gap || "1.5rem"};
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: ${({ columns }) => columns || "repeat(1, 1fr)"};
+    gap: ${({ gap }) => gap || "1rem"};
+  }
 `;
 
 export const Flex = styled.div.withConfig({
