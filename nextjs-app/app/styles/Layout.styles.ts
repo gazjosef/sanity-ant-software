@@ -7,7 +7,7 @@ export const Wrapper = styled.div.withConfig({
   padding?: string;
   maxWidth?: string;
 }>`
-  --padding: ${({ padding }) => padding || "4rem"};
+  --padding: ${({ padding }) => padding || "0rem"};
   --max-width: ${({ maxWidth }) => maxWidth || "var(--max-width)"};
 
   width: min(90%, 120rem);
