@@ -7,6 +7,7 @@ export const HeaderContainer = styled.header`
   width: 100%;
   padding: 2rem 0;
   box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-xl);
   /* position: fixed;
   top: 0;
   top: 0;

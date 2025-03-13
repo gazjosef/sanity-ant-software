@@ -4,17 +4,17 @@
 
 /* 🌎 Define CSS Variables for Theming */
 :root {
-  /* 🌈 Colours */
-  --primary: #3498db; /* Primary brand colour */
-  --secondary: #2ecc71; /* Secondary brand colour */
-  --accent: #f39c12; /* Accent / Call-to-action */
-  --danger: #e74c3c; /* Error / Danger */
-  --success: #2ecc71; /* Success */
-  --warning: #f1c40f; /* Warning */
-  --info: #3498db; /* Info */
+  /* 🎨 Colours */
+  --color-primary: #3498db; /* 🔵 Primary brand colour */
+  --color-secondary: #2ecc71; /* 🟢 Secondary brand colour */
+  --color-accent: #f39c12; /* 🟠 Accent / Call-to-action */
+  --color-danger: #e74c3c; /* 🔴 Error / Danger */
+  --color-success: #2ecc71; /* ✅ Success */
+  --color-warning: #f1c40f; /* ⚠️ Warning */
+  --color-info: #3498db; /* ℹ️ Info */
 
   /* 🎨 White Shades */
-  --white-0: hsl(0, 0%, 100%);
+  --white-0: hsl(0, 0%, 100%); /* 🏳️ Pure White */
   --white-50: hsl(0, 0%, 97%);
   --white-100: hsl(0, 0%, 95%);
   --white-200: hsl(0, 0%, 87%);
@@ -29,9 +29,9 @@
   /* 🎨 Black Shades */
   --black-800: hsl(0, 0%, 20%);
   --black-900: hsl(0, 0%, 10%);
-  --black-1000: hsl(0, 0%, 0%);
+  --black-1000: hsl(0, 0%, 0%); /* 🏴 Pure Black */
 
-  /* 🌓 Dark Mode */
+  /* 🌙 Dark Mode */
   --background-light: #ffffff;
   --background-dark: #1e1e1e;
   --text-light: #333;
@@ -46,24 +46,66 @@
   --gap: 1rem;
 
   /* 📱 Breakpoints */
-  --mobile: 480px;
-  --tablet: 768px;
-  --desktop: 1024px;
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
 
   /* 🔤 Typography */
   --font-primary: "Inter", sans-serif;
-  --font-size-small: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-large: 2rem;
-  --font-size-xl: 2.5rem;
+  --font-size-xs: 1.2rem; /* 🔡 12px */
+  --font-size-sm: 1.4rem; /* 🔡 14px */
+  --font-size-base: 1.6rem; /* 🔡 16px */
+  --font-size-lg: 1.8rem; /* 🔡 18px */
+  --font-size-xl: 2rem; /* 🔠 20px */
+  --font-size-2xl: 2.4rem; /* 🔠 24px */
+  --font-size-3xl: 3rem; /* 🔠 30px */
+
+  /* 🔤 Font Weights */
   --font-weight-light: 300;
   --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  /* 🎨 Shadows & Borders */
-  --shadow-sm: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0px 4px 8px rgba(0, 0, 0, 0.15);
-  --border-radius: 8px;
+  /* 🔢 Line Heights */
+  --line-height-xs: 1.2;
+  --line-height-sm: 1.4;
+  --line-height-base: 1.6;
+  --line-height-lg: 1.8;
+  --line-height-xl: 2;
+
+  /* 📦 Spacing (Margins & Padding) */
+  --spacing-xs: 0.4rem; /* 🔲 4px */
+  --spacing-sm: 0.8rem; /* 🔲 8px */
+  --spacing-base: 1.6rem; /* 🔲 16px */
+  --spacing-lg: 2.4rem; /* 🔲 24px */
+  --spacing-xl: 3.2rem; /* 🔲 32px */
+
+  /* 📏 Gaps for Flex/Grid */
+  --gap-xs: 0.4rem;
+  --gap-sm: 0.8rem;
+  --gap-base: 1.6rem;
+  --gap-lg: 2.4rem;
+  --gap-xl: 3.2rem;
+
+  /* 🏗️ Borders */
+  --border-radius-sm: 0.4rem; /* 4px */
+  --border-radius-base: 0.8rem; /* 8px */
+  --border-radius-lg: 1.6rem; /* 16px */
+  --border-radius-full: 9999px; /* ⚪ Fully rounded */
+
+  /* 🌫️ Box Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-base: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 10px 15px rgba(0, 0, 0, 0.15);
+
+  /* 📏 Container Widths */
+  --container-xs: 48rem; /* 480px */
+  --container-sm: 64rem; /* 640px */
+  --container-md: 76.8rem; /* 768px */
+  --container-lg: 102.4rem; /* 1024px */
+  --container-xl: 128rem; /* 1280px */
 
   /* 🎬 Animations */
   --transition: 0.3s ease-in-out;
