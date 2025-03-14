@@ -1,18 +1,14 @@
 import { Grid, Wrapper } from "@/app/styles/Layout.styles";
 import { HeroSection } from "./Hero.styles";
 import Image from "next/image";
+import UnDrawImg from "@/app/assets/img/illustrations/undraw_responsive_6c8s.svg";
 
 export default function Hero() {
   return (
     <HeroSection>
       <Wrapper>
         <Grid>
-          <Image
-            src="/img/illustrations/undraw_responsive_6c8s.svg"
-            alt="responsive"
-            width={500}
-            height={350}
-          />
+          <Image src={UnDrawImg} alt="responsive" width={500} height={350} />
           <section>
             <h1 className="primary-heading | u-margin-bottom-small">
               Get scalable, modern and reliable{" "}
