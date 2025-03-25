@@ -5,6 +5,8 @@ import { AllPosts } from "@/app/components/Posts";
 import GetStartedCode from "@/app/components/GetStartedCode";
 import Hero from "./components/Section/Hero/Hero";
 import About from "./components/Section/About/About";
+import Services from "./components/Section/Services/Services";
+import Contact from "./components/Section/Contact/Contact";
 
 export default async function Page() {
   return (
@@ -12,6 +14,8 @@ export default async function Page() {
       <div className="bg-gradient-to-r from-red-200 from-0% via-white via-40%  relative">
         <Hero />
         <About />
+        <Services />
+        <Contact />
 
         {/* <div className="bg-gradient-to-b from-white w-full h-40 absolute top-0"></div>   */}
         <div className="bg-gradient-to-t from-white w-full h-40 absolute bottom-0"></div>
