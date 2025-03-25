@@ -4,13 +4,14 @@ import Link from "next/link";
 import { AllPosts } from "@/app/components/Posts";
 import GetStartedCode from "@/app/components/GetStartedCode";
 import Hero from "./components/Section/Hero/Hero";
+import About from "./components/Section/About/About";
 
 export default async function Page() {
   return (
     <>
       <div className="bg-gradient-to-r from-red-200 from-0% via-white via-40%  relative">
         <Hero />
-        <h1>Hello World</h1>
+        <About />
 
         {/* <div className="bg-gradient-to-b from-white w-full h-40 absolute top-0"></div>   */}
         <div className="bg-gradient-to-t from-white w-full h-40 absolute bottom-0"></div>

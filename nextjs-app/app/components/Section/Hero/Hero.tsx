@@ -9,7 +9,7 @@ export default function Hero() {
     <Section>
       {/* <Grid placeItems="center"> */}
       <Wrapper>
-        <Grid rows="2">
+        <Grid columns="2">
           <Image src={UnDrawImg} alt="responsive" width={500} height={350} />
           <section>
             <PrimaryHeading className="u-margin-bottom-small">
@@ -24,29 +24,6 @@ export default function Hero() {
             <Paragraph>{/* <CtaBtn /> */}</Paragraph>
           </section>
         </Grid>
-        {/* <div className="container | u-mt-3xl | u-grid u-even-columns u-gap-5">
-          <div>
-            <Image
-              src="/img/illustrations/undraw_responsive_6c8s.svg"
-              alt="responsive"
-              width={500}
-              height={350}
-            />
-          </div>
-
-          <div className="section-hero__text">
-            <h1 className="primary-heading | u-margin-bottom-small">
-              Get scalable, modern and reliable{" "}
-              <span className="">custom software</span>.
-            </h1>
-
-            <p className="paragraph">
-              We develop web, mobile and custom software that&apos;s tailor-made
-              to capture all your unique and essential requirements.
-            </p>
-            <p className="paragraph"></p>
-          </div>
-        </div> */}
       </Wrapper>
       {/* </Grid> */}
     </Section>
