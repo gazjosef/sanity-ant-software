@@ -10,8 +10,8 @@ export default function About() {
       {/* <Grid placeItems="center"> */}
       <Wrapper>
         <PrimaryHeading className="u-margin-bottom-small">
-          Get scalable, modern and reliable{" "}
-          <span className="">custom software</span>.
+          Web development company that vows your .
+          <span className="">success</span>.
         </PrimaryHeading>
         <Grid columns="2">
           <Image src={UnDrawImg} alt="responsive" width={500} height={350} />

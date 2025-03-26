@@ -10,8 +10,8 @@ export default function Services() {
       {/* <Grid placeItems="center"> */}
       <Wrapper>
         <PrimaryHeading className="u-margin-bottom-small">
-          Get scalable, modern and reliable{" "}
-          <span className="">custom software</span>.
+          We provide <span className="">professional IT solutions</span> for
+          your business.
         </PrimaryHeading>
         <Grid columns="2"></Grid>
       </Wrapper>
