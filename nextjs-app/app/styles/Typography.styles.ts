@@ -11,7 +11,8 @@ export const PrimaryHeading = styled.h1<HeadingProps>`
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-bold);
   color: var(--primary);
-  text-align: ${({ align }) => align || "left"};
+  text-align: ${({ align }) => align || "center"};
+  margin-bottom: 2rem;
 
   /* margin-inline: auto; */
   /* max-width: 30ch; */

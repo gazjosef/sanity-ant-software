@@ -9,7 +9,7 @@ export default function Hero() {
     <Section>
       {/* <Grid placeItems="center"> */}
       <Wrapper>
-        <Grid columns="2">
+        <Grid columns="repeat(2, 1fr)">
           <Image src={UnDrawImg} alt="responsive" width={500} height={350} />
           <section>
             <PrimaryHeading className="u-margin-bottom-small">

@@ -13,7 +13,7 @@ export default function About() {
           Web development company that vows your .
           <span className="">success</span>.
         </PrimaryHeading>
-        <Grid columns="2">
+        <Grid columns="repeat(2, 1fr)">
           <Image src={UnDrawImg} alt="responsive" width={500} height={350} />
           <section>
             <Paragraph>
