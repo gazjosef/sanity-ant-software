@@ -17,6 +17,7 @@ import { resolveOpenGraphImage } from "@/sanity/lib/utils";
 import { handleError } from "./client-utils";
 
 import Header2 from "./components/Layout/Header";
+import Footer2 from "./components/Layout/Footer/Footer";
 
 /**
  * Generate metadata for the page.
@@ -84,7 +85,8 @@ export default async function RootLayout({
           <Header2 />
           {/* <Header /> */}
           <main className="">{children}</main>
-          <Footer />
+          {/* <Footer /> */}
+          <Footer2 />
         </section>
         <SpeedInsights />
       </body>
