@@ -16,7 +16,7 @@ import { settingsQuery } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
 import { handleError } from "./client-utils";
 
-import Header2 from "./components/Layout/Navbar/Navbar";
+import Header2 from "./components/Layout/Header";
 
 /**
  * Generate metadata for the page.
