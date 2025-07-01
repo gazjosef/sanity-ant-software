@@ -6,6 +6,8 @@ import { sanityFetch } from "@/sanity/lib/live";
 
 import Hero from "./components/Section/Hero2";
 import About from "./components/Section/About";
+import Services from "./components/Section/Services";
+import Contact from "./components/Section/Contact";
 
 export default async function Page() {
   const { data: settings } = await sanityFetch({
@@ -16,6 +18,8 @@ export default async function Page() {
     <>
       <Hero />
       <About />
+      <Services />
+      <Contact />
       <div className="border-t border-gray-100 bg-gray-50">
         <div className="container">
           <aside className="py-12 sm:py-20">
