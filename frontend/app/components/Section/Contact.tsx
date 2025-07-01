@@ -22,7 +22,7 @@ export default function Contact() {
         >
           <div className="max-w-md">
             <Image
-              src="/img/illustrations/undraw_programming_2svr.svg"
+              src="/images/illustrations/undraw_programming_2svr.svg"
               alt="Programming illustration"
               width={300}
               height={225}
